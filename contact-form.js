@@ -11,7 +11,7 @@
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
                         <p class="text-gray-400">Envíanos un mensaje y te responderemos a la brevedad.</p>
                     </div>
-                    <form action="https://formspree.io/f/xpwqnzre" method="POST" class="bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700" id="publikeno-contact-form">
+                    <form action="https://formspree.io/f/mqkazpge" method="POST" class="bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700" id="publikeno-contact-form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-sm font-medium mb-2">Nombre Completo</label>
