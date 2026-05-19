@@ -2,15 +2,15 @@
 <html lang="es">
 
   <head>
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXNNX53V');
-</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KXNNX53V');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -118,54 +118,122 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     <script type="module" crossorigin src="/assets/index-BGNG3vZw.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DkBninqz.css">
-  <link rel="canonical" href="https://publikeno.com/" />  <meta name="google-site-verification" content="ytEktTUdnlF8Q-Qz4GbeEIXB5LNwVvs6DgnyOGd5-S4" />
-</head>
+    <link rel="canonical" href="https://publikeno.com/" />
+    <meta name="google-site-verification" content="ytEktTUdnlF8Q-Qz4GbeEIXB5LNwVvs6DgnyOGd5-S4" />
+    
+    <style>
+        /* Estilos para el botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: currentColor;
+        }
+        /* Tooltip para el botón */
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 30px;
+            right: 90px;
+            background-color: #333;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+        .whatsapp-float:hover + .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+  </head>
 
   <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXNNX53V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXNNX53V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div id="root"></div>
     
-    <!-- Formulario de Contacto con FormSubmit -->
-    <section id="contacto" class="py-20 bg-slate-900 text-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
-                <p class="text-gray-400">Envíanos un mensaje y te responderemos a la brevedad.</p>
-            </div>
-            <form action="https://formsubmit.co/kenopublicidad@gmail.com" method="POST" class="bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700">
-                <!-- Configuraciones de FormSubmit -->
-                <input type="hidden" name="_subject" value="Nuevo Lead de Publikeno.com">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://publikeno.com/">
+    <!-- Nueva Sección de Contacto Conversacional -->
+    <section id="contacto" class="py-24 bg-slate-900 text-white border-t border-slate-800">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                    ¿Listo para escalar tu negocio?
+                </h2>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                    Olvídate de los formularios lentos. Hablemos directamente por WhatsApp y descubre cómo podemos ayudarte a generar más leads hoy mismo.
+                </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Nombre Completo</label>
-                        <input type="text" name="Nombre" placeholder="Nombre Completo" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Teléfono / WhatsApp</label>
-                        <input type="tel" name="Telefono" placeholder="Teléfono / WhatsApp" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                    </div>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <a href="https://wa.me/5219981545555?text=Hola%20Publikeno,%20me%20gustaría%20recibir%20una%20auditoría%20gratuita%20de%20mi%20negocio." 
+                       class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-blue-600 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-blue-700 w-full md:w-auto" 
+                       role="button">
+                        <span class="mr-2">🚀 Solicitar Auditoría Gratuita</span>
+                    </a>
+                    
+                    <a href="https://wa.me/5219981545555?text=Hola%20Publikeno,%20quiero%20más%20información%20sobre%20sus%20servicios." 
+                       class="inline-flex items-center justify-center px-8 py-4 font-bold text-blue-400 transition-all duration-200 border-2 border-blue-400 rounded-xl hover:bg-blue-400 hover:text-white w-full md:w-auto" 
+                       role="button">
+                        <span class="mr-2">💬 Chatear con un experto</span>
+                    </a>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2">Correo Electrónico</label>
-                    <input type="email" name="Email" placeholder="Correo Electrónico" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-500">
+                <div class="flex flex-col items-center">
+                    <div class="mb-2 text-blue-500">⚡ Respuesta inmediata</div>
+                    <p>Atención personalizada en menos de 5 minutos.</p>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2">¿En qué podemos ayudarte?</label>
-                    <textarea name="Mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                <div class="flex flex-col items-center">
+                    <div class="mb-2 text-blue-500">🎯 Estrategia a medida</div>
+                    <p>Analizamos tu caso sin compromiso.</p>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition duration-300 transform hover:scale-[1.02]">
-                    Enviar Mensaje
-                </button>
-            </form>
+                <div class="flex flex-col items-center">
+                    <div class="mb-2 text-blue-500">🤖 Tecnología IA</div>
+                    <p>Implementamos lo último en automatización.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="/contact-form.js"></script>
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/5219981545555?text=Hola%20Publikeno,%20vengo%20desde%20la%20web%20y%20necesito%20ayuda." class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.014 7.787l-2.014 7.213 7.389-1.941c2.247 1.18 4.805 1.854 7.525 1.854 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.454 0-4.749-0.619-6.755-1.704l-0.484-0.261-4.385 1.152 1.173-4.199-0.287-0.512c-1.191-2.123-1.875-4.576-1.875-7.196 0-7.732 6.268-14 14-14s14 6.268 14 14-6.268 14-14 14zM22.957 19.143c-0.381-0.191-2.257-1.113-2.606-1.241-0.349-0.127-0.603-0.191-0.857 0.191s-0.984 1.241-1.206 1.495c-0.222 0.254-0.444 0.286-0.825 0.095-0.381-0.191-1.608-0.593-3.063-1.891-1.132-1.010-1.896-2.256-2.118-2.637s-0.024-0.587 0.167-0.777c0.171-0.171 0.381-0.444 0.571-0.667s0.254-0.381 0.381-0.635c0.127-0.254 0.063-0.476-0.032-0.667s-0.857-2.063-1.175-2.825c-0.309-0.743-0.623-0.643-0.857-0.655-0.222-0.011-0.476-0.013-0.73-0.013s-0.667 0.095-1.016 0.476c-0.349 0.381-1.333 1.302-1.333 3.175s1.365 3.683 1.556 3.937c0.191 0.254 2.685 4.1 6.503 5.746 0.908 0.392 1.617 0.626 2.17 0.802 0.912 0.29 1.742 0.249 2.398 0.151 0.731-0.109 2.257-0.921 2.575-1.81s0.317-1.651 0.222-1.81c-0.095-0.16-0.349-0.254-0.73-0.444z"></path>
+        </svg>
+    </a>
+    <div class="whatsapp-tooltip">¿Necesitas ayuda? ¡Escríbenos!</div>
+
+    <!-- Eliminamos el script del formulario ya que no lo usaremos -->
+    <!-- <script src="/contact-form.js"></script> -->
   </body>
 </html>
