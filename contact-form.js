@@ -1,74 +1,60 @@
 (function() {
     const checkInterval = setInterval(() => {
         const footer = document.querySelector('footer');
-        if (footer && !document.getElementById('publikeno-contact-form')) {
+        if (footer && !document.getElementById('publikeno-conversational-section')) {
             const contactSection = document.createElement('section');
             contactSection.id = 'contacto';
-            contactSection.className = 'py-20 bg-slate-900 text-white';
+            contactSection.className = 'py-24 bg-slate-900 text-white border-t border-slate-800';
             contactSection.innerHTML = `
-                <div class="container mx-auto px-4 max-w-4xl">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
-                        <p class="text-gray-400">Envíanos un mensaje y te responderemos a la brevedad.</p>
+                <div class="container mx-auto px-4 max-w-4xl text-center" id="publikeno-conversational-section">
+                    <div class="mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                            ¿Listo para escalar tu negocio?
+                        </h2>
+                        <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                            Olvídate de los formularios lentos. Hablemos directamente por WhatsApp y descubre cómo podemos ayudarte a generar más leads hoy mismo.
+                        </p>
+                        
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                            <a href="https://wa.me/5219981545555?text=Hola%20Publikeno,%20me%20gustaría%20recibir%20una%20auditoría%20gratuita%20de%20mi%20negocio." 
+                               style="background-color: #2563eb; color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 300px; transition: all 0.3s ease;"
+                               onmouseover="this.style.backgroundColor='#1d4ed8'" 
+                               onmouseout="this.style.backgroundColor='#2563eb'">
+                                🚀 Solicitar Auditoría Gratuita
+                            </a>
+                            
+                            <a href="https://wa.me/5219981545555?text=Hola%20Publikeno,%20quiero%20más%20información%20sobre%20sus%20servicios." 
+                               style="border: 2px solid #60a5fa; color: #60a5fa; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 300px; transition: all 0.3s ease;"
+                               onmouseover="this.style.backgroundColor='#60a5fa'; this.style.color='white'" 
+                               onmouseout="this.style.backgroundColor='transparent'; this.style.color='#60a5fa'">
+                                💬 Chatear con un experto
+                            </a>
+                        </div>
                     </div>
-                    <form action="https://formspree.io/f/mqkazpge" method="POST" class="bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700" id="publikeno-contact-form">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Nombre Completo</label>
-                                <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Correo Electrónico</label>
-                                <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                            </div>
+                    
+                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-500">
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 text-blue-500 font-bold">⚡ Respuesta inmediata</div>
+                            <p>Atención personalizada en menos de 5 minutos.</p>
                         </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium mb-2">Teléfono / WhatsApp</label>
-                            <input type="tel" name="phone" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 text-blue-500 font-bold">🎯 Estrategia a medida</div>
+                            <p>Analizamos tu caso sin compromiso.</p>
                         </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium mb-2">¿En qué podemos ayudarte?</label>
-                            <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                        <div class="flex flex-col items-center">
+                            <div class="mb-2 text-blue-500 font-bold">🤖 Tecnología IA</div>
+                            <p>Implementamos lo último en automatización.</p>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition duration-300 transform hover:scale-[1.02]">
-                            Enviar Mensaje
-                        </button>
-                        <div id="form-status" class="mt-4 text-center hidden"></div>
-                    </form>
+                    </div>
                 </div>
             `;
+            
+            // Eliminar cualquier sección de contacto previa si existe
+            const oldContact = document.getElementById('contacto');
+            if (oldContact) oldContact.remove();
+            
             footer.parentNode.insertBefore(contactSection, footer);
             clearInterval(checkInterval);
-            
-            // Manejo del envío del formulario
-            const form = document.getElementById('publikeno-contact-form');
-            const status = document.getElementById('form-status');
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const data = new FormData(form);
-                status.textContent = 'Enviando...';
-                status.className = 'mt-4 text-center text-blue-400';
-                status.classList.remove('hidden');
-                
-                try {
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (response.ok) {
-                        status.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
-                        status.className = 'mt-4 text-center text-green-400';
-                        form.reset();
-                    } else {
-                        status.textContent = 'Hubo un error. Por favor, intenta de nuevo.';
-                        status.className = 'mt-4 text-center text-red-400';
-                    }
-                } catch (error) {
-                    status.textContent = 'Error de conexión. Intenta más tarde.';
-                    status.className = 'mt-4 text-center text-red-400';
-                }
-            });
         }
     }, 1000);
 })();
